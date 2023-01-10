@@ -4,7 +4,7 @@ A ChatGPT bot for Kubernetes issues and Prometheus alerts.
 No more solving alerts alone in the darkness - the internet has your back.
 
 # How it works
-Prometheus alerts are forwarded to the bot using a webhook receiver.
+Prometheus forwards alerts to the bot using a webhook receiver.
 
 The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Prometheus alerts and Kubernetes events.
 
