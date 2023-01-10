@@ -14,7 +14,6 @@ The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robust
 
 # Prerequisites
 * A Slack workspace (for Teams/Discord support, please open an issue)
-* A [ChatGPT API key](https://beta.openai.com/account/api-keys)
 
 # Setup
 1. [Install Robusta with Helm](https://docs.robusta.dev/master/installation.html)
@@ -32,10 +31,9 @@ customPlaybooks:
   - chat_gpt_enricher: {}
 ```
 
-3. Add your ChatGPT APIKey. Add the following to `globalConfig` in `generated_values.yaml`:
+3. Add your [ChatGPT API key](https://beta.openai.com/account/api-keys) to `generated_values.yaml`. Make sure you edit the existing `globalConfig` section, don't add a duplicate section.
 
 ```
-# make sure you add this to the existing globalConfig section, not a new globalConfig section
 globalConfig:
   chat_gpt_token: YOUR KEY GOES HERE
 ```
