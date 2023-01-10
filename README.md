@@ -41,3 +41,19 @@ globalConfig:
 4. Do a Helm upgrade to apply the new values: `helm upgrade robusta robusta/robusta --values=generated_values.yaml --set clusterName=<YOUR_CLUSTER_NAME>`
 
 5. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
+
+# Demo
+Instead of waiting around for a real Prometheus alert, lets simulate a fake one.
+
+1. Choose any running pod in your cluster
+2. Use the robusta cli to trigger a fake alert on that pod:
+
+```
+robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=<namespace> pod_name=<pod-name>
+```
+
+If you installed Robusta with default settings, you can trigger the alert on Prometheus itself like so:
+
+```
+robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=prometheus-robusta-kube-prometheus-st-prometheus-0
+```
