@@ -62,6 +62,11 @@ If you installed Robusta with default settings, you can trigger the alert on Pro
 robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=prometheus-robusta-kube-prometheus-st-prometheus-0
 ```
 
+# Promotional Images
+Feel free to use the following image or create your own.
+
+![Screen Shot 2023-01-10 at 18 29 56](https://user-images.githubusercontent.com/494087/211615506-fb8ba31a-4569-4ab6-9504-f1e42457771e.png)
+
 # More Resources
 [Natan Yellin and Sid Palas livestreamed about this on YouTube](https://www.youtube.com/watch?v=jMR8M3Xqlzg
 ) - relevant part starts at 38:54
