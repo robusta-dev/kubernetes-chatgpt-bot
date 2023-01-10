@@ -1,35 +1,34 @@
 # Introduction
-ChatGPT bot for Kubernetes issues using [Robusta](https://github.com/robusta-dev/robusta)
+A ChatGPT bot for Kubernetes issues and Prometheus alerts.
 
-# What does it do?
-Allow getting ChatGPT insights on Prometheus alerts fired on your Kubernetes cluster
+No more solving alerts alone in the darkness - the internet has your back.
+
+# How it works
+Prometheus alerts are forwarded to the bot using a webhook receiver.
+
+The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Prometheus alerts and Kubernetes events.
 
 # Prerequisites
-Use Robusta to enrich and publish your Prometheus alerts
-Use Robusta's Slack integration (Currently this works only with Slack)
+* A Slack workspace (for Teams/Discord support, please open an issue)
+* A [ChatGPT API key](https://beta.openai.com/account/api-keys)
 
-
-# How to use?
-1. Install Robusta [90 seconds installation](https://docs.robusta.dev/master/installation.html)
-2. Get your ChatGPT api key [ChatGPT API key](https://beta.openai.com/account/api-keys)
-3. Add this actions repo to Robusta
-To your `generated_values.yaml` file add: 
+# Setup
+1. [Install Robusta with Helm](https://docs.robusta.dev/master/installation.html)
+2. Configure the ChatGPT playbook. Add the following to Robusta's `generated_values.yaml` file: 
 ```
 playbookRepos:
   chatgpt_robusta_actions:
     url: "https://github.com/robusta-dev/kubernetes-chatgpt-bot.git"
-```
 
-4. Add the api key and custom playbooks to your `generated_values.yaml`: 
-```
 globalConfig:
   chat_gpt_token: YOUR KEY GOES HERE
 
 
 customPlaybooks:
-# Add 'Ask ChatGPT' button to all Prometheus alerts notifications
+# Add the 'Ask ChatGPT' button to all Prometheus alerts
 - triggers:
   - on_prometheus_alert: {}
   actions:
   - chat_gpt_enricher: {}
 ```
+3. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
