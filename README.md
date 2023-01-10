@@ -3,6 +3,10 @@ A ChatGPT bot for Kubernetes issues. Ask ChatGPT how to solve your Prometheus al
 
 No more solving alerts alone in the darkness - the internet has your back.
 
+<a href="https://www.loom.com/share/964cd8735a874287a9155c77320bdcdb">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/964cd8735a874287a9155c77320bdcdb-with-play.gif">
+  </a>
+  
 # How it works
 Prometheus forwards alerts to the bot using a webhook receiver.
 
