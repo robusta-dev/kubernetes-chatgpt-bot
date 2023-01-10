@@ -35,6 +35,7 @@ customPlaybooks:
   actions:
   - chat_gpt_enricher: {}
 ```
-Continue installing Robusta. If you already installed Robusta, do an upgrade to apply the new values: `helm upgrade robusta robusta/robusta --values=generated_values.yaml --set clusterName=<YOUR_CLUSTER_NAME>`
+
+If you already installed Robusta, do an upgrade to apply the new values: `helm upgrade robusta robusta/robusta --values=generated_values.yaml --set clusterName=<YOUR_CLUSTER_NAME>`
 
 3. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
