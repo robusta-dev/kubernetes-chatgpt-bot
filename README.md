@@ -18,15 +18,11 @@ The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robust
 
 # Setup
 1. [Install Robusta with Helm](https://docs.robusta.dev/master/installation.html)
-2. Configure the ChatGPT playbook. Add the following to Robusta's `generated_values.yaml` file: 
+2. Load the ChatGPT playbook. Add the following to `generated_values.yaml`: 
 ```
 playbookRepos:
   chatgpt_robusta_actions:
     url: "https://github.com/robusta-dev/kubernetes-chatgpt-bot.git"
-
-globalConfig:
-  chat_gpt_token: YOUR KEY GOES HERE
-
 
 customPlaybooks:
 # Add the 'Ask ChatGPT' button to all Prometheus alerts
@@ -36,6 +32,14 @@ customPlaybooks:
   - chat_gpt_enricher: {}
 ```
 
-If you already installed Robusta, do an upgrade to apply the new values: `helm upgrade robusta robusta/robusta --values=generated_values.yaml --set clusterName=<YOUR_CLUSTER_NAME>`
+3. Add your ChatGPT APIKey. Add the following to `globalConfig` in `generated_values.yaml`:
 
-3. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
+```
+# make sure you add this to the existing globalConfig section, not a new globalConfig section
+globalConfig:
+  chat_gpt_token: YOUR KEY GOES HERE
+```
+
+4. Do a Helm upgrade to apply the new values: `helm upgrade robusta robusta/robusta --values=generated_values.yaml --set clusterName=<YOUR_CLUSTER_NAME>`
+
+5. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
