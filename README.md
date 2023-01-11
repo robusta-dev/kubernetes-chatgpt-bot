@@ -65,9 +65,12 @@ robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namesp
 # Future Improvements
 Can ChatGPT give better answers if you feed it pod logs or the output of `kubectl get events`?
 
-[Robusta](http://robusta.dev) already collects this data and attaches it to Prometheus alerts, so it should be easy to add. (But it should be disabled by default to avoid sending sensitive data to ChatGPT.)
+[Robusta](http://robusta.dev) already collects this data and attaches it to Prometheus alerts, so it should be easy to add. (It will need to be disabled by default to avoid sending sensitive data to ChatGPT.)
 
 PRs are welcome! We can probably get some easy improvements just via prompt engineering.
+
+# Community
+[Join the discussion on our Slack.](https://home.robusta.dev/slack)
 
 # Promotional Images
 Feel free to use the following image or create your own.
