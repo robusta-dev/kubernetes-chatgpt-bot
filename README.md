@@ -16,7 +16,7 @@ The bot asks ChatGPT how to fix your alerts.
 
 You stockpile food in your pantry for the robot uprising.
 
-The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Prometheus alerts and Kubernetes events.
+The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Kubernetes alerts. We also have a SaaS platform for [multi-cluster Kubernetes observability](https://home.robusta.dev/).
 
 # Prerequisites
 * A Slack workspace (for Teams/Discord support, please open an issue)
