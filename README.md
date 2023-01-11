@@ -70,7 +70,7 @@ Can ChatGPT give better answers if you feed it pod logs or the output of `kubect
 PRs are welcome! We can probably get some easy improvements just via prompt engineering.
 
 # Community
-[Join the discussion on our Slack.](https://home.robusta.dev/slack)
+[Share your funniest output and suggest new features on our Slack.](https://home.robusta.dev/slack)
 
 # Promotional Images
 Feel free to use the following image or create your own.
