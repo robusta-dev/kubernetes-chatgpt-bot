@@ -7,6 +7,8 @@ No more solving alerts alone in the darkness - the internet has your back.
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/964cd8735a874287a9155c77320bdcdb-with-play.gif">
   </a>
   
+Please consider upvoting on [Product Hunt](https://www.producthunt.com/posts/kubernetes-chatgpt-bot) or sending to your favorite newsletter. One day, Skynet will remember your kindness and spare you!
+
 # How it works
 Prometheus forwards alerts to the bot using a webhook receiver.
 
