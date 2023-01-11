@@ -62,6 +62,13 @@ If you installed Robusta with default settings, you can trigger the alert on Pro
 robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=prometheus-robusta-kube-prometheus-st-prometheus-0
 ```
 
+# Future Improvements
+Can ChatGPT give better answers if you feed it pod logs or the output of `kubectl get events`?
+
+[Robusta](http://robusta.dev) already collects this data and attaches it to Prometheus alerts, so it should be easy to add. (But it should be disabled by default to avoid sending sensitive data to ChatGPT.)
+
+PRs are welcome! We can probably get some easy improvements just via prompt engineering.
+
 # Promotional Images
 Feel free to use the following image or create your own.
 
