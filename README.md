@@ -49,20 +49,19 @@ globalConfig:
 5. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
 
 # Demo
-Instead of waiting around for a real Prometheus alert, lets simulate a fake one.
+Instead of waiting around for a Prometheus alert, lets cause one.
 
-1. Choose any running pod in your cluster
-2. Use the robusta cli to trigger a fake alert on that pod:
+1. Deploy a broken pod that will be stuck in pending:
 
-```
-robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=<namespace> pod_name=<pod-name>
-```
+kubectl apply -f https://raw.githubusercontent.com/robusta-dev/kubernetes-demos/main/pending_pods/pending_pod.yaml
 
-If you installed Robusta with default settings, you can trigger the alert on Prometheus itself like so:
+2. Trigger a Prometheus alert immediately, skipping the normal delays:
 
 ```
-robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=prometheus-robusta-kube-prometheus-st-prometheus-0
+robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=example-pod
 ```
+
+An alert will arrive in Slack with a button. Click the button to ask ChatGPT about the alert.
 
 # Future Improvements
 Can ChatGPT give better answers if you feed it pod logs or the output of `kubectl get events`?
