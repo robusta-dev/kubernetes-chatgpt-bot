@@ -1,5 +1,5 @@
 # Introduction
-A ChatGPT bot for Kubernetes issues. Ask ChatGPT how to solve your Prometheus alerts, get pithy responses.
+A ChatGPT[^1] bot for Kubernetes issues. Ask the AI how to solve your Prometheus alerts, get pithy responses.
 
 No more solving alerts alone in the darkness - the internet has your back.
 
@@ -12,7 +12,7 @@ Please consider upvoting on [Product Hunt](https://www.producthunt.com/posts/kub
 # How it works
 Prometheus forwards alerts to the bot using a webhook receiver.
 
-The bot asks ChatGPT how to fix your alerts.
+The bot sends a query to OpenAI, asking it how to fix your alerts.
 
 You stockpile food in your pantry for the robot uprising.
 
@@ -84,3 +84,5 @@ Feel free to use the following image or create your own.
 * [Natan tests ChatGPT on production Kubernetes alerts](https://www.youtube.com/watch?v=RVK6jb4Ssuo)
 * [Natan Yellin and Sid Palas go over the code on YouTube](https://www.youtube.com/watch?v=jMR8M3Xqlzg
 ) - relevant part starts at 38:54
+
+[^1]: Technically this project doesn't use ChatGPT. It uses the `text-davinci-003` model which is a [GPT3.5-based sibling of ChatGPT](https://matt-rickard.ghost.io/gpt-lineage/). Given that most people are familiar with ChatGPT, but not `text-dainci-003` or GPT3.5, we've decided to keep the name "ChatGPT bot" despite the technical inaccuracy.
