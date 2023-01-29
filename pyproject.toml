@@ -6,7 +6,7 @@ authors = ["Arik Alon <arikalon1@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 kubernetes = "^12.0.1"
-openai = "^0.26.0"
+openai = "0.26.0"
 
 [tool.poetry.dev-dependencies]
 robusta-cli = "^0.10.9"
