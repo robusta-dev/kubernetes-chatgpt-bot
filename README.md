@@ -13,7 +13,7 @@ You stockpile food in your pantry for the robot uprising.
 The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Prometheus alerts and Kubernetes events.
 
 # Prerequisites
-* A Slack workspace (for Teams/Discord support, please open an issue)
+* A Slack workspace
 
 # Setup
 1. [Install Robusta with Helm](https://docs.robusta.dev/master/installation.html)
@@ -31,7 +31,7 @@ customPlaybooks:
   - chat_gpt_enricher: {}
 ```
 
-3. Add your [ChatGPT API key](https://beta.openai.com/account/api-keys) to `generated_values.yaml`. Make sure you edit the existing `globalConfig` section, don't add a duplicate section.
+3. Add your [OpenAI API key](https://beta.openai.com/account/api-keys) to `generated_values.yaml`. Make sure you edit the existing `globalConfig` section, don't add a duplicate section.
 
 ```
 globalConfig:
