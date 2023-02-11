@@ -1,16 +1,22 @@
 # Introduction
-A ChatGPT bot for Kubernetes issues. Ask ChatGPT how to solve your Prometheus alerts, get pithy responses.
+A ChatGPT[^1] bot for Kubernetes issues. Ask the AI how to solve your Prometheus alerts, get pithy responses.
 
 No more solving alerts alone in the darkness - the internet has your back.
+
+<a href="https://www.loom.com/share/964cd8735a874287a9155c77320bdcdb">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/964cd8735a874287a9155c77320bdcdb-with-play.gif">
+  </a>
+  
+Please consider upvoting on [Product Hunt](https://www.producthunt.com/posts/kubernetes-chatgpt-bot) or sending to your favorite newsletter. One day, Skynet will remember your kindness and spare you!
 
 # How it works
 Prometheus forwards alerts to the bot using a webhook receiver.
 
-The bot asks ChatGPT how to fix your alerts.
+The bot sends a query to OpenAI, asking it how to fix your alerts.
 
 You stockpile food in your pantry for the robot uprising.
 
-The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Prometheus alerts and Kubernetes events.
+The bot is implemented using [Robusta.dev](https://github.com/robusta-dev/robusta), an open source platform for responding to Kubernetes alerts. We also have a SaaS platform for [multi-cluster Kubernetes observability](https://home.robusta.dev/).
 
 # Prerequisites
 * A Slack workspace
@@ -43,17 +49,40 @@ globalConfig:
 5. [Send your Prometheus alerts to Robusta](https://docs.robusta.dev/master/user-guide/alert-manager.html). Alternatively, just use Robusta's bundled Prometheus stack.
 
 # Demo
-Instead of waiting around for a real Prometheus alert, lets simulate a fake one.
+Instead of waiting around for a Prometheus alert, lets cause one.
 
-1. Choose any running pod in your cluster
-2. Use the robusta cli to trigger a fake alert on that pod:
-
-```
-robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=<namespace> pod_name=<pod-name>
-```
-
-If you installed Robusta with default settings, you can trigger the alert on Prometheus itself like so:
+1. Deploy a broken pod that will be stuck in pending state:
 
 ```
-robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=prometheus-robusta-kube-prometheus-st-prometheus-0
+kubectl apply -f https://raw.githubusercontent.com/robusta-dev/kubernetes-demos/main/pending_pods/pending_pod.yaml
 ```
+
+2. Trigger a Prometheus alert immediately, skipping the normal delays:
+
+```
+robusta playbooks trigger prometheus_alert alert_name=KubePodCrashLooping namespace=default pod_name=example-pod
+```
+
+An alert will arrive in Slack with a button. Click the button to ask ChatGPT about the alert.
+
+# Future Improvements
+Can ChatGPT give better answers if you feed it pod logs or the output of `kubectl get events`?
+
+[Robusta](http://robusta.dev) already collects this data and attaches it to Prometheus alerts, so it should be easy to add. 
+
+PRs are welcome!
+
+# Community
+[Share your funniest output and suggest new features on our Slack.](https://home.robusta.dev/slack)
+
+# Promotional Images
+Feel free to use the following image or create your own.
+
+![Screen Shot 2023-01-10 at 18 29 56](https://user-images.githubusercontent.com/494087/211615506-fb8ba31a-4569-4ab6-9504-f1e42457771e.png)
+
+# More Resources
+* [Natan tests ChatGPT on production Kubernetes alerts](https://www.youtube.com/watch?v=RVK6jb4Ssuo)
+* [Natan Yellin and Sid Palas go over the code on YouTube](https://www.youtube.com/watch?v=jMR8M3Xqlzg
+) - relevant part starts at 38:54
+
+[^1]: Technically this project doesn't use ChatGPT. It uses the `text-davinci-003` model which is a [GPT3.5-based sibling of ChatGPT](https://matt-rickard.ghost.io/gpt-lineage/). Given that most people are familiar with ChatGPT, but not `text-dainci-003` or GPT3.5, we've decided to keep the name "ChatGPT bot" despite the technical inaccuracy.
