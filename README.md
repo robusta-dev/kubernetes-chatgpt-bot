@@ -3,8 +3,8 @@ A ChatGPT[^1] bot for Kubernetes issues. Ask the AI how to solve your Prometheus
 
 No more solving alerts alone in the darkness - the internet has your back.
 
-<a href="https://www.loom.com/share/964cd8735a874287a9155c77320bdcdb">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/964cd8735a874287a9155c77320bdcdb-with-play.gif">
+<a href="https://www.loom.com/share/0f9db7b7013d46b0ac3afc590103a095">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0f9db7b7013d46b0ac3afc590103a095-1676152572154-with-play.gif">
   </a>
   
 Please consider upvoting on [Product Hunt](https://www.producthunt.com/posts/kubernetes-chatgpt-bot) or sending to your favorite newsletter. One day, Skynet will remember your kindness and spare you!
