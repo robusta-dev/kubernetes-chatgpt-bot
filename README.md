@@ -85,4 +85,4 @@ Feel free to use the following image or create your own.
 * [Natan Yellin and Sid Palas go over the code on YouTube](https://www.youtube.com/watch?v=jMR8M3Xqlzg
 ) - relevant part starts at 38:54
 
-[^1]: Technically this project doesn't use ChatGPT. It uses the `text-davinci-003` model which is a [GPT3.5-based sibling of ChatGPT](https://matt-rickard.ghost.io/gpt-lineage/). Given that most people are familiar with ChatGPT, but not `text-dainci-003` or GPT3.5, we've decided to keep the name "ChatGPT bot" despite the technical inaccuracy.
+[^1]: Technically this project doesn't use ChatGPT. It uses the `text-davinci-003` model which is a [GPT3.5-based sibling of ChatGPT](https://matt-rickard.ghost.io/gpt-lineage/). Given that most people are familiar with ChatGPT, but not `text-davinci-003` or GPT3.5, we've decided to keep the name "ChatGPT bot" despite the technical inaccuracy.
