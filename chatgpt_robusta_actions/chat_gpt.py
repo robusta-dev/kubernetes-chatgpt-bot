@@ -10,7 +10,7 @@ cache_size = 100
 lru_cache = cachetools.LRUCache(maxsize=cache_size)
 class ChatGPTTokenParams(ActionParams):
     """
-    :var token: ChatGPT auth token
+    :var chat_gpt_token: ChatGPT auth token
     """
     chat_gpt_token: str
 
