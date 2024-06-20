@@ -1,6 +1,7 @@
 # Introduction
 
-**Want a complete AI investigation of your alerts with an autonomous AI agent that can fetch data and investigate on it's own? The next generation of AI troubleshooting for Prometheus alerts is currently in private beta. [You can request access here](https://robusta-dev.typeform.com/request-ng-ai).**
+💡 **[HolmesGPT](https://github.com/robusta-dev/holmesgpt) our advanced Open Source DevOps assistant has been launched. You can investigate incidents, triage issues, enrich alerts and much more. Check out [HolmesGPT](https://github.com/robusta-dev/holmesgpt)**
+--
 
 A ChatGPT[^1] bot for Kubernetes issues. Ask the AI how to solve your Prometheus alerts, get pithy responses.
 
