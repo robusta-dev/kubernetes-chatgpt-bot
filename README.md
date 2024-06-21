@@ -1,7 +1,6 @@
-# Introduction
+ ## 🚨This project will be depreciated and replaced by [HolmesGPT](https://github.com/robusta-dev/holmesgpt), our advanced Open Source DevOps assistant. With Holmes you can investigate incidents, triage issues, enrich alerts and much more. Check it out [https://github.com/robusta-dev/holmesgpt](https://github.com/robusta-dev/holmesgpt)**
 
-💡 **[HolmesGPT](https://github.com/robusta-dev/holmesgpt) our advanced Open Source DevOps assistant has been launched. With Holmes you can investigate incidents, triage issues, enrich alerts and much more. Check it out [https://github.com/robusta-dev/holmesgpt](https://github.com/robusta-dev/holmesgpt)**
---
+# Introduction
 
 A ChatGPT[^1] bot for Kubernetes issues. Ask the AI how to solve your Prometheus alerts, get pithy responses.
 
