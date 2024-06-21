@@ -1,4 +1,4 @@
- ## 🚨This project will be depreciated and replaced by [HolmesGPT](https://github.com/robusta-dev/holmesgpt), our advanced Open Source DevOps assistant. With Holmes you can investigate incidents, triage issues, enrich alerts and much more. Check it out [https://github.com/robusta-dev/holmesgpt](https://github.com/robusta-dev/holmesgpt)**
+ ## 🚨This project will be depreciated and replaced by [HolmesGPT](https://github.com/robusta-dev/holmesgpt), our advanced Open Source DevOps assistant. With Holmes you can investigate incidents, triage issues, enrich alerts and much more. Check it out [https://github.com/robusta-dev/holmesgpt](https://github.com/robusta-dev/holmesgpt)
 
 # Introduction
 
